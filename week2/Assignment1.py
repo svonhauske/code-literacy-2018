@@ -57,7 +57,7 @@ answer1 = raw_input("Would you like to find out your stripper name? (yes or no) 
 
 def myStory():
 
-	print ("Welcome to MadLibs, " + stripperName + "\n")
+	print ("Welcome to MadLibs, " + name1 + "\n")
 	print ("To play, you must answer the questions below.")
 	print ("---------------------------------------------")
 	print ("\n")
@@ -88,7 +88,9 @@ if answer1 == "yes":
 	print ("Hahahaha! Anyway... \n")
 	myStory()
 	
-
+else: 
+	print ("Fine... your loss!")
+	myStory()
 
 
 
