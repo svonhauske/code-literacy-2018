@@ -87,11 +87,18 @@ if answer1 == "yes":
 	print ("Your stripper name is: " + stripperName + "\n")
 	print ("Hahahaha! Anyway... \n")
 	myStory()
+<<<<<<< HEAD
 
 else: 
 	print ("Fine... your loss!")
 	myStory()
 
+=======
+	
+else: 
+	print ("Fine... your loss!")
+	myStory()
+>>>>>>> 10ce9ffd860ecd7a3598aa86874ac374692a02e9
 
 
 
