@@ -16,7 +16,7 @@ def playBattleship(): #Define game function
 
 
 	def printBoardBlue(board):#Function for printing board in blue    
-	    for row in board:
+	    for column in board:
 	        prBlue ("  ".join(row))
 
 	def printBoardRed(board):	#Function for printing board in blue  
