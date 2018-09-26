@@ -17,11 +17,11 @@ def playBattleship(): #Define game function
 
 	def printBoardBlue(board):#Function for printing board in blue    
 	    for column in board:
-	        prBlue ("  ".join(row))
+	        prBlue ("  ".join(column))
 
 	def printBoardRed(board):	#Function for printing board in blue  
-	    for row in board:
-	        prRed ("  ".join(row))
+	    for column in board:
+	        prRed ("  ".join(column))
 
 	shipRow = randint(0, (length - 1))	#Create random numbers for ship's coordinates
 	shipCol = randint(0, (length - 1))
