@@ -51,7 +51,7 @@ def playBattleship(): #Define game function
 ~^~~~~~^~~~~^~~^~~~~^^~~^~.___________________________________________________ ________________'~~~~^^~~^~~~~^~~~^~~~~^~~~^^~~~~^
 ^~~~~^~~^~~~^~~~^^~~~~^~~~~^~~^~~~^~~^~~~^~~~~^~~^~~~^~~~^^~~~~^~~~~^~~^~~~^~~~~^~~~~^~~^~~~^~~~^^~~~~^~~~~^~~^~~~^~~^^~^~~~~^~~~~^""")
 
-	level1 = raw_input ("CHOOSE YOUR LEVEL: \n1: 10 lives \n2: 8 lives \n3: lives \n")
+	level1 = raw_input ("CHOOSE YOUR LEVEL: \n1: 10 lives \n2: 8 lives \n3: 6 lives \n")
 
 #Different levels, different amount of lives
 	if level1 == "1":
@@ -71,9 +71,6 @@ def playBattleship(): #Define game function
 	prGrey ("-----GET READY TO PLAY!----- \n----- THIS IS YOUR BOARD -----")
 	printBoardBlue(board)
 	prGrey("LIVES: " + str(lives) + "\n")
-
-	print (str(shipRow))
-	print (str(shipCol))
 
 	for x in range(0, lives):#Looping until player one wins or finishes his lives
 
@@ -129,12 +126,12 @@ def playBattleship(): #Define game function
 prGrey("WELCOME PLAYER ONE!")
 play = raw_input ("READY TO PLAY?\n")
 
-if play == ("yes" || "YES"):
+if play == ("yes"):
 	prGrey("LET'S BEGIN!")
 	playBattleship() #Runs playBattleship
 
 	play2 = raw_input ("RESTART?\n") #Asks if player wants to play again
-	while play2 == ("yes" || "YES"):#Will keep looping as long as the answer to restart is yes, if it isn't it exits the loop
+	while play2 == ("yes"):#Will keep looping as long as the answer to restart is yes, if it isn't it exits the loop
 		prGrey("LET'S BEGIN!")
 		playBattleship()
 		play2 = raw_input ("RESTART?\n")
