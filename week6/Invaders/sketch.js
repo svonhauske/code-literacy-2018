@@ -3,26 +3,35 @@ var invaders= [];
 var lasers = []; 
 var edge = false;
 
-
 function setup() 
 {
   createCanvas(450, 400);
-  
-  //New spaceship
   spaceship = new Spaceship();
-	resetSketch();   
+  resetSketch();
+  textAlign(CENTER);
+  
 }//Void Setup
 
 
 function draw() 
 {
   background(0,40);
+  textSize(25);
+  fill(255);
+  text("Space Invaders", width/2, 35);
   spaceship.show();
   spaceship.move();
   laserHits();
   checkEdges();
   deleteObject(invaders);
   deleteObject(lasers);
+  if(invaders.length === 0)
+  {
+    fill(255);
+    textSize(20);
+    text("You win! \n Press mouse to Reset.", width/2, height/2)
+    
+  } 
 
 }//Draw
 
@@ -31,7 +40,7 @@ function mousePressed()
 {
   if(invaders.length === 0)
   {
-		resetSketch();
+  resetSketch();
   }
 }
 
@@ -41,7 +50,6 @@ function resetSketch()
   for (var x = 0; x < 8; x++) 
   {
     invaders[x] = new Invader(x*35+30, 80);
-    lasers = [];
   }
 }
 
@@ -56,7 +64,7 @@ function keyPressed()
     lasers.push(laser);
   }
   
-	// Moving spaceship
+  // Moving spaceship
   if (keyCode === RIGHT_ARROW) 
   {
     spaceship.setDir(1);
@@ -114,7 +122,7 @@ function laserHits()
 //Check if invaders hit left or right edge
 function checkEdges()
 {
-  	this.edge = false;
+    this.edge = false;
   
   for (var z = 0; z < invaders.length; z++) 
   {
